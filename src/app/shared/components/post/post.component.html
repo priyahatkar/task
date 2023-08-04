@@ -1,0 +1,30 @@
+
+<div class="row">
+    <div class="col-md-4"  *ngFor="let p of postArray; index as i">
+        <div class="card my-5">
+            <div class="card-header"
+            [ngClass]="{
+                'bg-warning': i % 2 === 0,
+                'bg-success': i % 2!== 0
+            }">
+                <h3 class="cardTitle">
+                    {{p.title}}
+                    <!-- <a href=""><span>...</span></a> -->
+                </h3>
+            </div>
+            <div class="card-body">
+                <p>
+                    {{p.body}}
+                </p>
+                <!-- <a href=""><span>...</span></a> -->
+            </div>
+            <div class="card-footer d-flex justify-content-between" [ngClass]="{
+                'bg-warning': i % 2 === 0,
+                'bg-success': i % 2!== 0
+            }">
+                <button type="button" class="btn btn-primary">Edit</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

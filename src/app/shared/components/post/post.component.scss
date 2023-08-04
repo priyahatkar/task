@@ -1,0 +1,12 @@
+
+.card.my-5 {
+    .card-header h3, .card-body p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    p{
+        width: 80%;
+    }
+}
+
